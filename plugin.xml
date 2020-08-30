@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-rakscalc" version="1.0.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>rakscalc</name>
+    <js-module name="rakscalc" src="www/rakscalc.js">
+        <clobbers target="RaksCalc" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="rakscalc">
+                <param name="android-package" value="cordova.plugin.rakscalc.rakscalc" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/rakscalc.java" target-dir="src/cordova/plugin/rakscalc/rakscalc" />
+    </platform>
+</plugin>
